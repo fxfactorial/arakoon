@@ -9,6 +9,7 @@ then
     cat /etc/passwd
     sed -i "s/x:1500:/x:${UID}:/" /etc/passwd
 
+    ls -alh /home/jenkins
     chown ${UID} /home/jenkins
     chown ${UID} /home/jenkins/OPAM
     chown ${UID} /home/jenkins/.bash* || true
